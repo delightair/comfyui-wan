@@ -91,6 +91,15 @@ else
     cd $NETWORK_VOLUME/ComfyUI/custom_nodes/ComfyUI-KJNodes
     git pull
 fi
+if [ ! -d "$NETWORK_VOLUME/ComfyUI/custom_nodes/comfyui-various" ]; then
+    cd $NETWORK_VOLUME/ComfyUI/custom_nodes
+    git clone https://github.com/jamesWalker55/comfyui-various.git
+else
+    echo "Updating ComfyUI Various"
+    cd $NETWORK_VOLUME/ComfyUI/custom_nodes/comfyui-various
+    git pull
+fi
+
 
 if [ ! -d "$NETWORK_VOLUME/ComfyUI/custom_nodes/ComfyUI-VibeVoice" ]; then
     cd $NETWORK_VOLUME/ComfyUI/custom_nodes
